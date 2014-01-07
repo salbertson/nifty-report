@@ -1,0 +1,1 @@
+require 'nifty-report/report'

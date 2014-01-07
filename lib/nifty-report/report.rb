@@ -1,3 +1,5 @@
+require 'nifty-report/model'
+
 module Nifty
   class Report
     def initialize(sql, name, connection_string = nil)
