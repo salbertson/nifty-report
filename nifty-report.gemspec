@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "nifty-report"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Scott Albertson"]
   spec.email         = ["scott@thoughtbot.com"]
   spec.summary       = %q{Create reports the easy way.}
