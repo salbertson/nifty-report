@@ -1,5 +1,3 @@
-require "nifty/report/version"
-
 module Nifty
   class Report
     def initialize(sql, name, connection_string = nil)
