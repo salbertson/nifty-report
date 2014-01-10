@@ -9,7 +9,7 @@ module Nifty
     end
 
     def filename
-      @name.downcase.gsub(' ', '.') + ".#{Time.now.strftime('%F')}.csv"
+      @name.downcase.gsub(' ', '.') + ".#{Time.now.strftime('%F.%H:%M')}.csv"
     end
 
     def csv
