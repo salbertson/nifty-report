@@ -34,7 +34,7 @@ module Nifty
       AWS::S3::S3Object.store(filename, csv, ENV['AWS_S3_BUCKET'])
       remote_file = AWS::S3::S3Object.find(filename, ENV['AWS_S3_BUCKET'])
 
-      ReportMailer.report_email(email_address, remote_file.url(expires_in: 30)).deliver
+      ReportMailer.report_email(email_address, remote_file.url(expires_in: 30 * 60)).deliver
     end
   end
 end
