@@ -20,6 +20,13 @@ Or install it yourself as:
 
 ```
 report = Nifty::Report.new('SELECT * FROM users', 'User Report')
+report.csv
+```
+
+or
+
+```
+report = Nifty::Report.new('SELECT * FROM users', 'User Report')
 report.email_to('jimtom@example.com')
 ```
 
