@@ -3,6 +3,7 @@ require 'nifty-report/model'
 module Nifty
   class Report
     def initialize(sql, name, connection_string = nil)
+
       @sql = sql
       @name = name
       @connection_string = connection_string
