@@ -26,6 +26,9 @@ module Nifty
     end
 
     def email_to(email_address)
+
+      wat = "aaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+
       AWS::S3::Base.establish_connection!(
         access_key_id: ENV['AWS_ACCESS_KEY_ID'],
         secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
@@ -35,8 +38,6 @@ module Nifty
       remote_file = AWS::S3::S3Object.find(filename, ENV['AWS_S3_BUCKET'])
 
       ReportMailer.report_email(email_address, remote_file.url(expires_in: 30 * 60)).deliver
-
-      wat = "aaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
     end
   end
 end
