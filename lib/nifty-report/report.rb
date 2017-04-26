@@ -1,6 +1,6 @@
 require 'nifty-report/model'
 
-module Nifty
+module Nifty              
   class Report
     def initialize(sql, name, connection_string = nil)
       @sql = sql
@@ -26,7 +26,6 @@ module Nifty
     end
 
     def email_to(email_address)
-
       AWS::S3::Base.establish_connection!(
         access_key_id: ENV['AWS_ACCESS_KEY_ID'],
         secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
