@@ -9,11 +9,11 @@ module Nifty
     end
 
     def filename
-
       @name.downcase.gsub(' ', '.') + ".#{Time.now.strftime('%F')}.csv"
     end
 
     def csv
+
       Model.establish_connection(@connection_string)
       Model.connection.execute("COPY (#{@sql}) TO STDOUT WITH DELIMITER ',' CSV HEADER")
 
